@@ -21,7 +21,7 @@ class Collection {
 
   async _init() {
     await this.pool.query(`
-        CREATE TABLE IF NOT EXISTS saas_saas_documents (
+        CREATE TABLE IF NOT EXISTS saas_documents (
         id SERIAL PRIMARY KEY,
         collection VARCHAR(100) NOT NULL,
         doc_id VARCHAR(100) NOT NULL,
