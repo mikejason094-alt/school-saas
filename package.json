@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd client && node ../node_modules/vite/bin/vite.js build",
+    "build": "npm install && ls node_modules/.bin/vite 2>/dev/null && cd client && ../node_modules/.bin/vite build || (echo 'trying npx' && npx --yes vite build)",
     "start": "node server/server.js"
   },
   "dependencies": {
